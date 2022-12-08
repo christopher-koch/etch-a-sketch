@@ -1,19 +1,26 @@
 const container = document.querySelector('#grid-container');
-let gridSize = 0;
-const div = document.createElement('div');
+let gridWidth = 480;
+let gridSize = 16;
+let squareSize = gridWidth / gridSize;
 
-function createGrid () {
-    
-    while (gridSize < 16) {
-        gridSize++;
-        console.log(gridSize);
+function createGrid (num) {
+    let amountOfSquares = gridSize * gridSize;
+    let startAmount = 0;
+
+    while (amountOfSquares > startAmount) {
+        startAmount++;
         const div = document.createElement('div');
+        div.classList.add('square') //Hier direkt die squaresize dranhängen?
         container.append(div);
-    }
-    
+    } 
+
 }
 
-createGrid();
+createGrid(gridSize);
+
+
+
+// document.getElementById("container").getElementsByTagName("div").className += "square";
 
 
 
@@ -30,36 +37,4 @@ createGrid();
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// erstelle eine fläche innerhalb eines begrenzten containers
-// die Fläche ist in einheiten unterteilt
-
-// die fläche kann neu generiert werden
 
