@@ -10,10 +10,14 @@
     <main>
         <h1>Etcha a Sketch</h1>
         <div class="menu">
-            <button class="btn btn-primary">Pick Color</button>
-            <button class="btn btn-primary">Rainbow Mode</button>
-            <button class="btn btn-primary">Eraser</button>
-            <button class="btn btn-secondary">Create Grid</button>
+            <button class="btn btn-primary" onclick="changeColor('black')">Black</button>
+            <button class="btn btn-primary" onclick="changeColor('gray')">Gray</button>
+            <button class="btn btn-primary" onclick="changeColor('random')">Rainbow Mode</button>
+            <button class="btn btn-primary"  onclick="changeColor('blue')">Eraser</button>
+        </div>
+        <div class="menu">
+            <input type="text" placeholder="Size of Board" onchange="checkInput(this.value)">
+            <button>Set Size</button>
         </div>
         <div class="grid-container">
         </div>
